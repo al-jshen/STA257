@@ -7,20 +7,20 @@
 \BOOKMARK [2][-]{subsection.1.6}{Independence, Law of Total Probability}{section.1}% 7
 \BOOKMARK [1][-]{section.2}{Random Variables}{}% 8
 \BOOKMARK [2][-]{subsection.2.1}{Discrete Random Variables}{section.2}% 9
-\BOOKMARK [3][-]{subsubsection.2.1.1}{Bernoulli Distribution}{subsection.2.1}% 10
-\BOOKMARK [3][-]{subsubsection.2.1.2}{Binomial Distribution}{subsection.2.1}% 11
-\BOOKMARK [3][-]{subsubsection.2.1.3}{Geometric Distribution}{subsection.2.1}% 12
-\BOOKMARK [3][-]{subsubsection.2.1.4}{Negative Binomial Distribution}{subsection.2.1}% 13
-\BOOKMARK [3][-]{subsubsection.2.1.5}{Hypergeometric Distribution}{subsection.2.1}% 14
-\BOOKMARK [3][-]{subsubsection.2.1.6}{Poisson Distribution}{subsection.2.1}% 15
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Bernoulli}{subsection.2.1}% 10
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Binomial}{subsection.2.1}% 11
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Geometric}{subsection.2.1}% 12
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Negative Binomial}{subsection.2.1}% 13
+\BOOKMARK [3][-]{subsubsection.2.1.5}{Hypergeometric}{subsection.2.1}% 14
+\BOOKMARK [3][-]{subsubsection.2.1.6}{Poisson}{subsection.2.1}% 15
 \BOOKMARK [2][-]{subsection.2.2}{Continuous Random Variables}{section.2}% 16
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Uniform Distribution}{subsection.2.2}% 17
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Exponential Distribution}{subsection.2.2}% 18
-\BOOKMARK [3][-]{subsubsection.2.2.3}{Gamma Distribution}{subsection.2.2}% 19
-\BOOKMARK [3][-]{subsubsection.2.2.4}{Beta Distribution}{subsection.2.2}% 20
-\BOOKMARK [3][-]{subsubsection.2.2.5}{Uniform Distribution}{subsection.2.2}% 21
-\BOOKMARK [3][-]{subsubsection.2.2.6}{Standard Normal Distribution}{subsection.2.2}% 22
-\BOOKMARK [3][-]{subsubsection.2.2.7}{General Normal Distribution}{subsection.2.2}% 23
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Uniform}{subsection.2.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Exponential}{subsection.2.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Gamma}{subsection.2.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Beta}{subsection.2.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Uniform}{subsection.2.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.2.6}{Standard Normal}{subsection.2.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.2.7}{General Normal}{subsection.2.2}% 23
 \BOOKMARK [2][-]{subsection.2.3}{Transformations of Random Variables}{section.2}% 24
 \BOOKMARK [1][-]{section.3}{Expected Values}{}% 25
 \BOOKMARK [2][-]{subsection.3.1}{Mean and Variance}{section.3}% 26
