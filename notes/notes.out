@@ -1,39 +1,43 @@
 \BOOKMARK [1][-]{section.1}{Probability and Counting}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Introduction}{section.1}% 2
 \BOOKMARK [2][-]{subsection.1.2}{Set Theory}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{Probability Measures}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{Permutations and Combinations}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.5}{Conditional Probability}{section.1}% 6
-\BOOKMARK [2][-]{subsection.1.6}{Independence, Law of Total Probability}{section.1}% 7
-\BOOKMARK [1][-]{section.2}{Random Variables}{}% 8
-\BOOKMARK [2][-]{subsection.2.1}{Discrete Random Variables}{section.2}% 9
-\BOOKMARK [3][-]{subsubsection.2.1.1}{Bernoulli}{subsection.2.1}% 10
-\BOOKMARK [3][-]{subsubsection.2.1.2}{Binomial}{subsection.2.1}% 11
-\BOOKMARK [3][-]{subsubsection.2.1.3}{Geometric}{subsection.2.1}% 12
-\BOOKMARK [3][-]{subsubsection.2.1.4}{Negative Binomial}{subsection.2.1}% 13
-\BOOKMARK [3][-]{subsubsection.2.1.5}{Hypergeometric}{subsection.2.1}% 14
-\BOOKMARK [3][-]{subsubsection.2.1.6}{Poisson}{subsection.2.1}% 15
-\BOOKMARK [2][-]{subsection.2.2}{Continuous Random Variables}{section.2}% 16
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Uniform}{subsection.2.2}% 17
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Exponential}{subsection.2.2}% 18
-\BOOKMARK [3][-]{subsubsection.2.2.3}{Gamma}{subsection.2.2}% 19
-\BOOKMARK [3][-]{subsubsection.2.2.4}{Beta}{subsection.2.2}% 20
-\BOOKMARK [3][-]{subsubsection.2.2.5}{Uniform}{subsection.2.2}% 21
-\BOOKMARK [3][-]{subsubsection.2.2.6}{Standard Normal}{subsection.2.2}% 22
-\BOOKMARK [3][-]{subsubsection.2.2.7}{General Normal}{subsection.2.2}% 23
-\BOOKMARK [2][-]{subsection.2.3}{Transformations of Random Variables}{section.2}% 24
-\BOOKMARK [1][-]{section.3}{Expected Values}{}% 25
-\BOOKMARK [2][-]{subsection.3.1}{Mean and Variance}{section.3}% 26
-\BOOKMARK [3][-]{subsubsection.3.1.1}{LOTUS}{subsection.3.1}% 27
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Inequalities}{subsection.3.1}% 28
-\BOOKMARK [2][-]{subsection.3.2}{Moment Generating Functions}{section.3}% 29
-\BOOKMARK [1][-]{section.4}{Joint Distributions}{}% 30
-\BOOKMARK [2][-]{subsection.4.1}{Joint and Marginal Distributions}{section.4}% 31
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Discrete}{subsection.4.1}% 32
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Continuous}{subsection.4.1}% 33
-\BOOKMARK [2][-]{subsection.4.2}{Independence in Joint Distributions}{section.4}% 34
-\BOOKMARK [2][-]{subsection.4.3}{Conditional Distributions}{section.4}% 35
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Discrete}{subsection.4.3}% 36
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Continuous}{subsection.4.3}% 37
-\BOOKMARK [2][-]{subsection.4.4}{Functions of Joint Distributions}{section.4}% 38
-\BOOKMARK [2][-]{subsection.4.5}{Order Statistics}{section.4}% 39
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Definitions}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Laws of Set Theory}{subsection.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.3}{Probability Measures}{section.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Axioms of Probability Measures}{subsection.1.3}% 7
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Properties of Probability Measures}{subsection.1.3}% 8
+\BOOKMARK [2][-]{subsection.1.4}{Permutations and Combinations}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.5}{Conditional Probability}{section.1}% 10
+\BOOKMARK [2][-]{subsection.1.6}{Independence, Law of Total Probability}{section.1}% 11
+\BOOKMARK [1][-]{section.2}{Random Variables}{}% 12
+\BOOKMARK [2][-]{subsection.2.1}{Discrete Random Variables}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Bernoulli}{subsection.2.1}% 14
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Binomial}{subsection.2.1}% 15
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Geometric}{subsection.2.1}% 16
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Negative Binomial}{subsection.2.1}% 17
+\BOOKMARK [3][-]{subsubsection.2.1.5}{Hypergeometric}{subsection.2.1}% 18
+\BOOKMARK [3][-]{subsubsection.2.1.6}{Poisson}{subsection.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.2}{Continuous Random Variables}{section.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Uniform}{subsection.2.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Exponential}{subsection.2.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Gamma}{subsection.2.2}% 23
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Beta}{subsection.2.2}% 24
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Uniform}{subsection.2.2}% 25
+\BOOKMARK [3][-]{subsubsection.2.2.6}{Standard Normal}{subsection.2.2}% 26
+\BOOKMARK [3][-]{subsubsection.2.2.7}{General Normal}{subsection.2.2}% 27
+\BOOKMARK [2][-]{subsection.2.3}{Transformations of Random Variables}{section.2}% 28
+\BOOKMARK [1][-]{section.3}{Expected Values}{}% 29
+\BOOKMARK [2][-]{subsection.3.1}{Mean and Variance}{section.3}% 30
+\BOOKMARK [3][-]{subsubsection.3.1.1}{LOTUS}{subsection.3.1}% 31
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Inequalities}{subsection.3.1}% 32
+\BOOKMARK [2][-]{subsection.3.2}{Moment Generating Functions}{section.3}% 33
+\BOOKMARK [1][-]{section.4}{Joint Distributions}{}% 34
+\BOOKMARK [2][-]{subsection.4.1}{Joint and Marginal Distributions}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Discrete}{subsection.4.1}% 36
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Continuous}{subsection.4.1}% 37
+\BOOKMARK [2][-]{subsection.4.2}{Independence in Joint Distributions}{section.4}% 38
+\BOOKMARK [2][-]{subsection.4.3}{Conditional Distributions}{section.4}% 39
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Discrete}{subsection.4.3}% 40
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Continuous}{subsection.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.4}{Functions of Joint Distributions}{section.4}% 42
+\BOOKMARK [2][-]{subsection.4.5}{Order Statistics}{section.4}% 43
