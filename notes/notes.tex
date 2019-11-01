@@ -20,6 +20,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \newcommand{\fig}[1]{\centerline{\includegraphics[width=0.6\columnwidth]{#1}}}
 \newcommand{\ind}{\leavevmode{\parindent=1em\indent}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
 
 \AtBeginDocument{%
   \setlength\abovedisplayskip{-3pt}
@@ -253,6 +254,36 @@ From the definition of conditional probability, we can derive \textbf{Bayes' Rul
 \end{align*}
 
 \subsection{Law of Total Probability}
+
+Let $B_1, B_2, \ldots, B_n$ be sets satisfying the following conditions:
+
+\begin{enumerate}
+    \item $B_1\cup B_2\cup \ldots \cup B_n = \Omega$ (the $B_i$'s are a \textbf{partition} of $\Omega$)
+    \item $\forall i, j \in [1, n]\subseteq \N, i\neq j \implies B_i\cap B_j = \varnothing$ (pairwise disjoint)
+    \item $\forall i \in [1, n]\subseteq \N, P(B_i) > 0$ (strictly positive probability),
+\end{enumerate}
+
+we can conclude that for any event $A$, we have that 
+
+\begin{align*}
+    P(A) = \sum_{i=1}^n P(A|B_i)\,P(B_i)
+\end{align*}
+
+Proof: Since all $B_i$'s are pairwise disjoint, all $A\cap B_i$'s must also be pairwise disjoint. Then 
+
+\begin{align*}
+    P(A) &= P(A\cap \Omega) \\
+         &= P\left(A\cap \left(\bigcup_{i=1}^n B_i\right)\right)\,&\text{by condition 1}\\
+         &= P\left(\bigcup_{i=1}^n \left(A\cap B_i\right)\right) \\
+         &= \sum_{i=1}^n P(A\cap B_i)\,&\text{by Axiom 3 of probability measures}\\
+         &= \sum_{i=1}^n P(A|B_i)\,P(B_i)\,&\text{by definition of conditional probability}
+\end{align*}
+
+Under the same conditions, we can also conclude an alternate form of Bayes' Rule:
+
+\begin{align*}
+    P(B_j|A) = \frac{P(A|B_j)\,P(B_j)}{\sum_{i=1}^n P(A|B_i)\,P(B_i)}
+\end{align*}
 
 \subsection{Equations}
 
