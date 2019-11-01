@@ -6,6 +6,7 @@
 \usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{mathtools}
 \usepackage{amsmath,amsthm,amssymb,cancel,bm,upgreek}
@@ -246,10 +247,8 @@ Two events are \textbf{independent} if knowing that one has occured gives no inf
 From the definition of conditional probability, we can derive \textbf{Bayes' Rule}, which describes the probability of an event given prior knowledge of conditions related to the event: 
 
 \begin{align*}
-    &P(A|B)\,P(B) = P(A\cap B) = P(B\cap A) = P(B|A)\,P(A) \\
-    \addlinespace[0.1cm]
-    \implies &P(A|B)\,P(B) = P(B|A)\,P(A) \\
-    \addlinespace[0.1cm]
+    &P(A|B)\,P(B) = P(A\cap B) = P(B\cap A) = P(B|A)\,P(A) \\[0.1cm]
+    \implies &P(A|B)\,P(B) = P(B|A)\,P(A) \\[0.1cm]
     \implies &P(A|B) = \frac{P(B|A)\,P(A)}{P(B)} 
 \end{align*}
 
@@ -287,6 +286,33 @@ Under the same conditions, we can also conclude an alternate form of Bayes' Rule
 
 \subsection{Equations}
 
+\begin{tabularx}{\textwidth}{ l X r }
+    Axioms && $P(\Omega) = 1 \\[0.2cm]
+           && $P(A) \geq 0 \\[0.2cm]
+           && for mutually disjoint sets, $P(\bigcup_{i=1}^{\infty}A_i) = \sum_{i=1}^{\infty}P(A_i)$ \\[0.2cm]
+
+    Properties && $P(A^c) = 1-P(A)$ \\[0.2cm]
+               && $P(\varnothing) = 0, P(\Omega) = 1$ \\[0.2cm]
+               && $A\subseteq B \implies P(A) \leq P(B)$ \\[0.2cm]
+               && $P(A\cup B) = P(A) + P(B) - P(A\cap B)$\\[0.2cm]
+
+    Permutations && with replacement: $n^r$ \\[0.2cm]
+                 && without replacement: $\frac{n!}{(n-r)!}$ \\[0.2cm]
+
+    Combinations && ${n\choose r} = \frac{n!}{(n-r)!\,r!}$ \\[0.3cm]
+
+    Binomial Expansion && $(a+b)^n = \sum_{i=1}^{n}{n\choose k}a^k\,b^{n-k}$ \\[0.3cm]
+
+    Grouping $n$ objects into $r$ classes && ${n\choose n_1 n_2\ldots n_r} = \frac{n!}{n_1!\,n_2!\ldots n_r!}$ \\[0.3cm]
+
+    Conditional probability && $P(A|B) = \frac{P(A\cap B)}{P(B)}$ \\[0.3cm]
+
+    Bayes' Rule && $P(A|B) = \frac{P(B|A)\,P(A)}{P(B)}$ \\[0.3cm]
+                && $P(B_j|A) = \frac{P(A|B_j)\,P(B_j)}{\sum_{i=1}^n P(A|B_i)\,P(B_i)}$ \\[0.3cm]
+
+    Law of Total Probability && $P(A) = \sum_{i=1}^n P(A|B_i)\,P(B_i)$ \\
+ 
+\end{tabularx}
 
 % --------------------------------------------- %
 % Random Variables %
