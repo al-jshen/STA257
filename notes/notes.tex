@@ -181,13 +181,43 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
         \end{align*}
         
 
+\subsection{Counting}
 
+\textbf{Multiplication principle}: if there are $m$ ways to do one thing, and $n$ ways to do another thing, then there are $mn$ ways to do both things. 
 
-\subsection{Permutations and Combinations}
+\textbf{Permutation}: ordered arrangement of objects. 
+
+\begin{itemize}
+    \item Sampling \textbf{with replacement} means that duplicate item selection is allowed. (can pick the same object twice). For a set of size $n$ and a \textbf{sample size} (number of items selected) $r$, there are $n^r$ possible selections. 
+
+    \item Sampling \textbf{without replacement} means that each item is selected once at most. For a set of size $n$ and a sample size $r$, there are $n(n-1)\ldots(n-r+1) = \frac{n!}{(n-r)!}$ possible selections. In particular, there are $n(n-1)\ldots(1)=n!$ ways to order $n$ elements. 
+\end{itemize}
+
+\textbf{Combination}: arrangement of objects {\em without regard to order}. Think about this as the ways to select objects without replacement, divided by the ways that those objects can be ordered. For a set of size $n$ and a sample size $r$, we express the combination as follows:
+
+\begin{align*}
+    {n\choose r} = \frac{n(n-1)\ldots(n-r+1)}{r!} = \frac{n!}{(n-r)!\,r!}
+\end{align*}
+
+\textbf{Binomial expansion}: 
+
+\begin{align*}
+    (a+b)^n = \sum_{k=0}^n{n\choose k}a^k\,b^{n-k}
+\end{align*}
+
+In particular, for $a=b=1$, 
+
+\begin{align*}
+    (1+1)^n = 2^n = \sum_{k=0}^n{n\choose k}(1)^k(1)^{n-k} = \sum_{k=0}^n{n\choose k}
+\end{align*}
 
 \subsection{Conditional Probability}
 
+
+
 \subsection{Independence, Law of Total Probability}
+
+\subsection{Equations}
 
 
 % --------------------------------------------- %
