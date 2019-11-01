@@ -10,6 +10,7 @@
 \usepackage{mathtools}
 \usepackage{amsmath,amsthm,amssymb,cancel,bm,upgreek}
 \usepackage{floatrow}
+\usepackage[makeroom]{cancel}
 \usepackage{lastpage}
 \geometry{total={210mm,297mm},
 left=25mm,right=25mm,%
@@ -179,7 +180,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
                                      &= P(C\cup D\cup E)\;&\text{by Axiom 3 and disjointness of $C, D, E$}\\
                                      &= P(A\cup B)
         \end{align*}
-        
+\end{itemize} 
 
 \subsection{Counting}
 
@@ -211,11 +212,47 @@ In particular, for $a=b=1$,
     (1+1)^n = 2^n = \sum_{k=0}^n{n\choose k}(1)^k(1)^{n-k} = \sum_{k=0}^n{n\choose k}
 \end{align*}
 
-\subsection{Conditional Probability}
+The number of ways to group $n$ objects into $r$ classes, with $n_i$ objects in the $i$th classes, where $1<i<r$, is given by the following formula:
 
+\begin{align*}
+    {n\choose n_1 n_2\ldots n_r} = \frac{n!}{n_1!\,n_2!\ldots n_r!}
+\end{align*}
 
+Proof: There are $\displaystyle {n\choose n_1}$ ways to select the first class, $\displaystyle {n-n_1\choose n_2}$ ways to select the second class, and so on. Repeat this for all $r$ classes, and then apply the multiplication rule. Then we have that
 
-\subsection{Independence, Law of Total Probability}
+\begin{align*}
+    {n\choose n_1}{n-n_1\choose n_2}\ldots {n-n_1-\cdots-n_{r-1}\choose n_r} &= \frac{n!}{n_1!\,(n-n_1)!}\,\frac{(n-n_1)!}{n_2!\,(n-n_1-n_2)!}\ldots \frac{(n-n_1-\cdots-n_{r-1})!}{n_r!\,0!} \\
+                                                                             &= \frac{n!}{n_1!\,\cancel{(n-n_1)!}}\,\frac{\cancel{(n-n_1)!}}{n_2!\,\cancel{(n-n_1-n_2)!}}\ldots \frac{\cancel{(n-n_1-\cdots-n_{r-1})!}}{n_r!\,0!} \\
+                                                                             &= \frac{n!}{n_1!\,n_2!\ldots n_r!}
+\end{align*}
+
+\subsection{Conditional Probability and Independence}
+
+\textbf{Conditional probability}: probability that some event will occur given that another event has occured:
+
+\begin{align*}
+    P(A|B) = \frac{P(A\cap B)}{P(B)}
+\end{align*}
+
+Two events are \textbf{independent} if knowing that one has occured gives no information about the likelihood of the other occuring. Events $A, B$ are independent if and only if any of the following hold: 
+
+\begin{itemize}
+    \item $P(A|B) = P(A)$
+    \item $P(B|A) = P(B)$
+    \item $(A\cap B) = P(A)P(B)$
+\end{itemize}
+
+From the definition of conditional probability, we can derive \textbf{Bayes' Rule}, which describes the probability of an event given prior knowledge of conditions related to the event: 
+
+\begin{align*}
+    &P(A|B)\,P(B) = P(A\cap B) = P(B\cap A) = P(B|A)\,P(A) \\
+    \addlinespace[0.1cm]
+    \implies &P(A|B)\,P(B) = P(B|A)\,P(A) \\
+    \addlinespace[0.1cm]
+    \implies &P(A|B) = \frac{P(B|A)\,P(A)}{P(B)} 
+\end{align*}
+
+\subsection{Law of Total Probability}
 
 \subsection{Equations}
 

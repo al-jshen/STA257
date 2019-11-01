@@ -7,8 +7,8 @@
 \contentsline {subsubsection}{\numberline {1.3.1}Axioms of Probability Measures}{2}{subsubsection.1.3.1}% 
 \contentsline {subsubsection}{\numberline {1.3.2}Properties of Probability Measures}{2}{subsubsection.1.3.2}% 
 \contentsline {subsection}{\numberline {1.4}Counting}{3}{subsection.1.4}% 
-\contentsline {subsection}{\numberline {1.5}Conditional Probability}{4}{subsection.1.5}% 
-\contentsline {subsection}{\numberline {1.6}Independence, Law of Total Probability}{4}{subsection.1.6}% 
+\contentsline {subsection}{\numberline {1.5}Conditional Probability and Independence}{4}{subsection.1.5}% 
+\contentsline {subsection}{\numberline {1.6}Law of Total Probability}{4}{subsection.1.6}% 
 \contentsline {subsection}{\numberline {1.7}Equations}{4}{subsection.1.7}% 
 \contentsline {section}{\numberline {2}Random Variables}{5}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Discrete Random Variables}{5}{subsection.2.1}% 
