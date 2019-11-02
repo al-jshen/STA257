@@ -1,24 +1,24 @@
-\contentsline {section}{\numberline {1}Probability and Counting}{3}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}Introduction}{3}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}Set Theory}{3}{subsection.1.2}% 
-\contentsline {subsubsection}{\numberline {1.2.1}Definitions}{3}{subsubsection.1.2.1}% 
-\contentsline {subsubsection}{\numberline {1.2.2}Laws of Set Theory}{3}{subsubsection.1.2.2}% 
-\contentsline {subsection}{\numberline {1.3}Probability Measures}{3}{subsection.1.3}% 
-\contentsline {subsubsection}{\numberline {1.3.1}Axioms of Probability Measures}{3}{subsubsection.1.3.1}% 
-\contentsline {subsubsection}{\numberline {1.3.2}Properties of Probability Measures}{3}{subsubsection.1.3.2}% 
-\contentsline {subsection}{\numberline {1.4}Counting}{4}{subsection.1.4}% 
-\contentsline {subsection}{\numberline {1.5}Conditional Probability and Independence}{5}{subsection.1.5}% 
-\contentsline {subsection}{\numberline {1.6}Law of Total Probability}{6}{subsection.1.6}% 
-\contentsline {subsection}{\numberline {1.7}Equations}{7}{subsection.1.7}% 
-\contentsline {section}{\numberline {2}Random Variables}{8}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}Discrete Random Variables}{8}{subsection.2.1}% 
-\contentsline {subsubsection}{\numberline {2.1.1}Bernoulli}{8}{subsubsection.2.1.1}% 
-\contentsline {subsubsection}{\numberline {2.1.2}Binomial}{8}{subsubsection.2.1.2}% 
-\contentsline {subsubsection}{\numberline {2.1.3}Geometric}{8}{subsubsection.2.1.3}% 
-\contentsline {subsubsection}{\numberline {2.1.4}Negative Binomial}{8}{subsubsection.2.1.4}% 
-\contentsline {subsubsection}{\numberline {2.1.5}Hypergeometric}{9}{subsubsection.2.1.5}% 
-\contentsline {subsubsection}{\numberline {2.1.6}Poisson}{9}{subsubsection.2.1.6}% 
-\contentsline {subsection}{\numberline {2.2}Continuous Random Variables}{9}{subsection.2.2}% 
+\contentsline {section}{\numberline {1}Probability and Counting}{2}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Introduction}{2}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Set Theory}{2}{subsection.1.2}% 
+\contentsline {subsubsection}{\numberline {1.2.1}Definitions}{2}{subsubsection.1.2.1}% 
+\contentsline {subsubsection}{\numberline {1.2.2}Laws of Set Theory}{2}{subsubsection.1.2.2}% 
+\contentsline {subsection}{\numberline {1.3}Probability Measures}{2}{subsection.1.3}% 
+\contentsline {subsubsection}{\numberline {1.3.1}Axioms of Probability Measures}{2}{subsubsection.1.3.1}% 
+\contentsline {subsubsection}{\numberline {1.3.2}Properties of Probability Measures}{2}{subsubsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.4}Counting}{3}{subsection.1.4}% 
+\contentsline {subsection}{\numberline {1.5}Conditional Probability and Independence}{4}{subsection.1.5}% 
+\contentsline {subsection}{\numberline {1.6}Law of Total Probability}{5}{subsection.1.6}% 
+\contentsline {subsection}{\numberline {1.7}Equations}{6}{subsection.1.7}% 
+\contentsline {section}{\numberline {2}Random Variables}{7}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Discrete Random Variables}{7}{subsection.2.1}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Bernoulli}{7}{subsubsection.2.1.1}% 
+\contentsline {subsubsection}{\numberline {2.1.2}Binomial}{7}{subsubsection.2.1.2}% 
+\contentsline {subsubsection}{\numberline {2.1.3}Geometric}{7}{subsubsection.2.1.3}% 
+\contentsline {subsubsection}{\numberline {2.1.4}Negative Binomial}{7}{subsubsection.2.1.4}% 
+\contentsline {subsubsection}{\numberline {2.1.5}Hypergeometric}{8}{subsubsection.2.1.5}% 
+\contentsline {subsubsection}{\numberline {2.1.6}Poisson}{8}{subsubsection.2.1.6}% 
+\contentsline {subsection}{\numberline {2.2}Continuous Random Variables}{8}{subsection.2.2}% 
 \contentsline {subsubsection}{\numberline {2.2.1}Uniform}{9}{subsubsection.2.2.1}% 
 \contentsline {subsubsection}{\numberline {2.2.2}Exponential}{9}{subsubsection.2.2.2}% 
 \contentsline {subsubsection}{\numberline {2.2.3}Gamma}{9}{subsubsection.2.2.3}% 

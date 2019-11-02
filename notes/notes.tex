@@ -1,7 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{geometry}
 \usepackage{graphicx}
-\graphicspath{ {./figures/} }
+\graphicspath{{./figures/}}
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{setspace}
@@ -12,18 +12,20 @@
 \usepackage{mathtools}
 \usepackage{amsmath,amsthm,amssymb,cancel,bm,upgreek}
 \usepackage{floatrow}
-\usepackage[makeroom]{cancel}
+\usepackage{cancel}
 \usepackage{lastpage}
 \geometry{total={210mm,297mm},
 left=25mm,right=25mm,%
 bindingoffset=0mm, top=20mm,bottom=20mm}
-\setlength{\parindent}{0pt}
+
 \newcommand{\linia}{\rule{\linewidth}{0.5pt}}
 \newcommand{\fig}[1]{\centerline{\includegraphics[width=0.6\columnwidth]{#1}}}
 \newcommand{\ind}{\leavevmode{\parindent=1em\indent}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 
+\setcounter{tocdepth}{2}
+\setlength{\parindent}{0pt}
 \AtBeginDocument{%
   \setlength\abovedisplayskip{-3pt}
   \setlength\belowdisplayskip{5pt}}
@@ -33,12 +35,11 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \makeatletter
 \def\@maketitle{%
 \begin{center}
-\hfill{\textit{Last modified \today}} \\
+\hfill{\textit{Last modified \today}}
 \vspace{1em}
 {\huge \textsc{\@title}\par}
 \vspace{1em}
-\\
-\linia\\
+\linia
 \vspace{1em}
 \@author
 \vspace{1em}
@@ -79,13 +80,13 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 
 \subsection{Introduction}
 
-\textbf{Experiments}: situations wherre outcome is random. eg. flipping a coin is an experiment.
+\textbf{Experiments}: situations where outcome is random.\ e.g.\ flipping a coin is an experiment.
 
 \textbf{Sample space}: set of all possible outcomes, denoted $S$ or $\Omega$. The number of elements in the sample space (cardinality) is denoted $|\Omega|$.
 
 \textbf{Event}: a subset of a sample space.
 
-\textbf{Outcome}: a particular element of a sample space $s_1 \in \Omega$.
+\textbf{Outcome}: a particular element of a sample space.\ e.g.\ $s_1 \in \Omega$.
 
 \subsection{Set Theory}
 
@@ -95,7 +96,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
     \item \textbf{union}: $A \cup B$. Elements in either $A$ or $B$.
     \item \textbf{intersection}: $A \cap B$. Elements in both $A$ and $B$. 
     \item \textbf{complement} of A: $A^c$. Elements not in $A$.
-    \item \textbf{empty set}: $\varnothing$. Set with no elements in it. 
+    \item \textbf{empty set}: $\varnothing$. Set with no elements in it.
     \item $A$ and $B$ are \textbf{disjoint}: $A \cap B = \varnothing$. There are no elements in the intersection of $A$ and $B$.
 \end{itemize}
 
@@ -289,8 +290,8 @@ Under the same conditions, we can also conclude an alternate form of Bayes' Rule
 \subsection{Equations}
 
 \begin{tabularx}{\textwidth}{ l X r }
-    Axioms && $P(\Omega) = 1 \\[0.2cm]
-           && $P(A) \geq 0 \\[0.2cm]
+    Axioms && $P(\Omega) = 1$ \\[0.2cm]
+           && $P(A) \geq 0$ \\[0.2cm]
            && for mutually disjoint sets, $P(\bigcup_{i=1}^{\infty}A_i) = \sum_{i=1}^{\infty}P(A_i)$ \\[0.2cm]
 
     Properties && $P(A^c) = 1-P(A)$ \\[0.2cm]
@@ -379,10 +380,45 @@ $X \sim$ Pois($\lambda$). Large number of trials, each will a small probability 
 
 $\lambda$ is called the \textbf{rate parameter}. Think of dividing some interval into a large number of subintervals, such that the probability of an event occuring in each subinterval is small, but there are a large number of subintervals. 
 
-Assume that what happens in one subinterval is independent of what happens in the other subintervals, that the probability of some event occuring is the same for each subinterval, and that events do not occur simultaneously. Then this can be derived by setting up a binomial distribution in such a way that $n \to \infty$, $p\to 0$, and $np=\lambda$. 
+Assume that what happens in one subinterval is independent of what happens in the other subintervals, that the probability of some event occuring is the same for each subinterval, and that events do not occur simultaneously. Then this can be derived by setting up a binomial distribution in such a way that $n \to \infty$, $p\to 0$, and $np=\lambda$. \\
+
+{\Huge DERIVE POISSON FROM BINOMIAL} 
 
 % --------------------------------------------- %
 \subsection{Continuous Random Variables}
+
+\textbf{Continuous random variables} can take on a continuum of values rather than just a finite (or countably infinite) number. 
+
+\textbf{Probability density function (pdf)}. Analogous to the pmf for discrete random variables. Satisfies the following conditions:
+
+\begin{itemize}
+    \item $f(x) \geq 0$
+    \item $f$ is piecewise continuous 
+    \item $\int_{-\infty}^{\infty} f(x)dx = 1$
+\end{itemize}
+
+For some $a, b$ such that $a<b$, the probability that $X$ is in the interval $(a, b)$ is given by the area under $f(x)$ from $a$ to $b$: $P(a < X < b) = \int_a^b f(x)dx$. Note that the probability of taking on a particular value is 0: $P(X=c) = \int_c^c f(x)dx = 0$. This implies that $P(a\leq X\leq b) = P(a<X<b)$.
+
+For an (infinitessimally) small value of $dx$, the probability that $X$ is in the interval $(x, x+dx)$ is proportional to $f(x)$: $P(x\leq X\leq x+dx) = f(x)dx$. 
+
+The \textbf{cumulative distribution function (cdf)} can be expressed in terms of the pdf: 
+\begin{align*}
+    F(x) = P(X\leq x) = \int_{-\infty}^x f(t)dt
+\end{align*}
+
+If $f$ is continuous at $x$, then by the Fundamental Theorem of Calculus, 
+\begin{align*}
+    f(x) &= F'(x) \\
+    \implies P(a < X < b) &= \int_a^b f(x)dx = F(b) - F(a).
+\end{align*}
+
+If $F$ is strictly increasing on some interval $I$, with $F=0$ to the left of $I$ and $F=1$ to the right of $I$, then the \textbf{inverse} function $F^{-1}$ is well defined:
+\begin{align*}
+    y&=F(x) \\
+    \implies x&=F^{-1}(y)
+\end{align*}
+
+The \textbf{$p$th quantile} of F is the value $x_p$ such that $x_p = F^{-1}(p)$. Note that the \textbf{percentile} is the same as the quantile, but expressed as a percentage from 0 to 100, whereas the quantile is expressed as a value between 0 and 1. Special quantiles are the \textbf{median ($p=\frac{1}{2}$)} and the \textbf{lower and upper quartiles ($p=\frac{1}{4}, \frac{3}{4}$)} respectively. 
 
 \subsubsection{Uniform}
 
@@ -402,6 +438,8 @@ Assume that what happens in one subinterval is independent of what happens in th
 
 \subsection{Distributions}
 pmf/pdf, cdf, ex, var, range of support for k
+
+
 % --------------------------------------------- %
 % Expected Values %
 % --------------------------------------------- %
