@@ -4,6 +4,7 @@
 \graphicspath{ {./figures/} }
 \usepackage{caption}
 \usepackage{enumitem}
+\usepackage{setspace}
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{tabularx}
@@ -60,6 +61,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 
 % --------------------------------------------- %
 \begin{document}
+\setstretch{1.125}
 \title{STA257: Probability and Statistics I\\
     \Large University of Toronto | Fall 2019}
 \author{Jeff Shen}
@@ -323,6 +325,25 @@ Under the same conditions, we can also conclude an alternate form of Bayes' Rule
 
 % --------------------------------------------- %
 \subsection{Discrete Random Variables}
+
+\textbf{Random variable}: function from $\Omega$ to $\R$. 
+
+\textbf{Discrete random variable}: random variable which can only take a finite number of values, or a countably infinite number of values. 
+
+\textbf{Probability mass function (PMF)}: describes probability properties of a random variable. For some discrete random variable $X$ taking on values $x_1, x_2, \ldots$, the probability mass function is some function $p$ such that $p(x_i) = P(X=x_i)$, and satisfies that $\sum_{i=1}^{\infty} p(x_i) = 1$.
+
+\textbf{Cumulative distribution function (CDF)}: defined as some function $F$ such that $F(x) = P(X \leq x)$, where $-\infty < x < \infty$. It satisfies the following conditions:
+
+\begin{itemize}
+    \item $\lim_{x\to-\infty} F(x) = 0$
+    \item $\lim_{x\to\infty} F(x) = 1$
+    \item is right-continuous (can have jumps, but must be continuous when approaching values from the right side). Continuity implies right-continuity. 
+    \item is non-decreasing. 
+\end{itemize}
+
+\fig{pmfcdf}
+
+For random varriables $X, Y$ taking on values $x_1, x_2, \ldots$ and $y_1, y_2, \ldots$ respectively, $X$ and $Y$ are \textbf{independent} if $\forall i, j, P(X=x_i, Y=y_j) = P(X=x_i)P(Y=y_j)$. 
 
 \subsubsection{Bernoulli}
 
