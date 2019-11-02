@@ -343,20 +343,43 @@ Under the same conditions, we can also conclude an alternate form of Bayes' Rule
 
 \fig{pmfcdf}
 
-For random varriables $X, Y$ taking on values $x_1, x_2, \ldots$ and $y_1, y_2, \ldots$ respectively, $X$ and $Y$ are \textbf{independent} if $\forall i, j, P(X=x_i, Y=y_j) = P(X=x_i)P(Y=y_j)$. 
+For random variables $X, Y$ taking on values $x_1, x_2, \ldots$ and $y_1, y_2, \ldots$ respectively, $X$ and $Y$ are \textbf{independent} if $\forall i, j, P(X=x_i, Y=y_j) = P(X=x_i)P(Y=y_j)$. 
 
 \subsubsection{Bernoulli}
 
+$X \sim$ Bern($p$). Was there a success?
+
+$X$ takes on the values $1$ and $0$ with probabilities $p$ and $q=1-p$ respectively. For some event $A$, Bernoulli random variables are often used as an \textbf{indicator random variable}. That is, $I_A=1$ if $A$ occurs, and $I_A=0$ otherwise. 
+
 \subsubsection{Binomial}
+
+$X \sim$ Bin($n, p$). Something was done $n$ times. How many successes were there?
+
+Binomial random variables can be thought of as the sum of $n$ \textbf{i.i.d (independent and identically distributed)} Bernoulli random variables. That is, $X = X_1 + X_2 + \cdots + X_n$, where $X_i \sim$ Bern($p$).
 
 \subsubsection{Geometric}
 
+$X \sim$ Geom($p$). Keep going until there is a success. 
+
+Constructed from a (countably) infinite sequence of Bernoulli trials. Count the number of trials it took until finally getting a success. Some people don't include the $k$th trial (the last trial, which is a success), but we will. So $k$ is the trial on which we have a success.
+
 \subsubsection{Negative Binomial}
+
+$X \sim$ NB($n, p$). Keep going until there are $n$ successes.
+
+A natural extension to the geometric distribution—can be thought of as the sum of $n$ i.i.d geometric random variables. That is, $X = X_1 + X_2 + \cdots + X_n$, where $X_i \sim$ Geom($p$).
 
 \subsubsection{Hypergeometric}
 
+$X \sim$ HG($n, r, m$). Total population of $n$ in which $r$ are marked/tagged. We randomly pick $m$ from the population without replacement. How many are tagged?
+
 \subsubsection{Poisson}
 
+$X \sim$ Pois($\lambda$). Large number of trials, each will a small probability of success. 
+
+$\lambda$ is called the \textbf{rate parameter}. Think of dividing some interval into a large number of subintervals, such that the probability of an event occuring in each subinterval is small, but there are a large number of subintervals. 
+
+Assume that what happens in one subinterval is independent of what happens in the other subintervals, that the probability of some event occuring is the same for each subinterval, and that events do not occur simultaneously. Then this can be derived by setting up a binomial distribution in such a way that $n \to \infty$, $p\to 0$, and $np=\lambda$. 
 
 % --------------------------------------------- %
 \subsection{Continuous Random Variables}
@@ -377,7 +400,8 @@ For random varriables $X, Y$ taking on values $x_1, x_2, \ldots$ and $y_1, y_2, 
 
 \subsection{Transformations of Random Variables}
 
-
+\subsection{Distributions}
+pmf/pdf, cdf, ex, var, range of support for k
 % --------------------------------------------- %
 % Expected Values %
 % --------------------------------------------- %
