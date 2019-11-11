@@ -13,6 +13,7 @@
 \usepackage{amsmath,amsthm,amssymb,cancel,bm,upgreek}
 \usepackage{floatrow}
 \usepackage{cancel}
+\usepackage{sidecap}
 \usepackage{lastpage}
 \geometry{total={210mm,297mm},
 left=25mm,right=25mm,%
@@ -35,7 +36,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \makeatletter
 \def\@maketitle{%
 \begin{center}
-\hfill{\textit{Last modified \today}}
+\hfill{\textit{Last modified \today}} \\
 \vspace{1em}
 {\huge \textsc{\@title}\par}
 \vspace{1em}
@@ -422,13 +423,61 @@ The \textbf{$p$th quantile} of F is the value $x_p$ such that $x_p = F^{-1}(p)$.
 
 \subsubsection{Uniform}
 
+$U \sim$ Unif($a, b$). All intervals of the same length are equally probable. Probability is proportional to the length of the subinterval: longer subintervals are more probably.  
+
+Is a "universal" distribution because it can be used to generate all other distributions. For some strictly increasing and continuous cdf $F$,
+\begin{align*}
+    U \sim {\rm Unif}(0, 1) &\implies X=F^{-1}(U) \sim F \\ 
+    X \sim F &\implies U = F(X) \sim {\rm Unif}(0, 1)
+\end{align*}
+That is, plugging any random variable into its own cdf returns a uniform random variable, and plugging a uniform random variable into the inverse of the cdf yields a random variable distributed according to that cdf. 
+
 \subsubsection{Exponential}
+
+$X \sim$ Exp($\lambda$). Characterized by (and is the only distribution which has) the \textbf{memoryless property}: 
+\begin{align*}
+    P(X \geq s+t\,|\,X\geq s) = P(X\geq t)
+\end{align*}
+Proof: Let $X \sim$ Expo($\lambda$). Consider the \textbf{survival function} $P(X\geq s)$.
+\begin{align*}
+    P(X\geq s) = 1-P(X\leq s) = 1-(1-e^{-\lambda s}) = e^{-\lambda s}
+\end{align*}
+Then by definition of conditional probability, 
+\begin{align*}
+    P(X\geq s+t\,|\,X\geq s) = \frac{P(X\geq s+t,\,X\geq s)}{P(X\geq s)}
+\end{align*}
+But clearly, the term in the denominator is, 
+\begin{align*}
+    P(X\geq s+t,\,X\geq s) = P(X\geq s+t) = e^{-\lambda(s+t)} = e^{-\lambda s}e^{-\lambda t}
+\end{align*}
+Substituting this into the previous equation, 
+\begin{align*}
+    P(X\geq s+t\,|\,X\geq s) = \frac{\cancel{e^{-\lambda s}}e^{-\lambda t}}{\cancel{e^{-\lambda s}}} = e^{-\lambda t} = P(X\geq t)
+\end{align*}
+From this, we conclude that the probability of surviving $t$ more units of time is independent of how many units of time it has already survived. 
 
 \subsubsection{Gamma}
 
+$X \sim$ Gamma($\alpha, \lambda$). $\alpha$ is called the shape parameter (which varies the shape of the density), and $\lambda$ is called the scale parameter. Can be thought of as the sum of $\alpha$ i.i.d Exp($\lambda$) variables. That is, $X = X_1 + X_2 + \cdots + X_\alpha$, where $X_i\sim$ Exp($\lambda$). Thus, the case of $\alpha=1$ coincides with the exponential density.
+
+Based on the \textbf{gamma function}, which is an extension of the factorial function (to complex numbers). It is defined as follows: 
+\begin{align*}
+    \Gamma(z) = \int_0^{\infty} x^{z-1}e^{-x}dx,\;\text{where $z>0$}.
+\end{align*}
+The gamma function has the following identity:
+\begin{align*}
+    \Gamma(x+1) = x\,\Gamma(x).
+\end{align*}
+This identity implies that for any positive integer $n$, 
+\begin{align*}
+    \Gamma(n) = (n-1)!.
+\end{align*}
+
+{\huge watch the stat110 video for gamma https://www.youtube.com/watch?v=Qjeswpm0cWY}
+
 \subsubsection{Beta}
 
-\subsubsection{Uniform}
+{\huge watch the stat110 beta videos https://www.youtube.com/watch?v=UZjlBQbV1KU}
 
 \subsubsection{Standard Normal}
 
@@ -438,7 +487,6 @@ The \textbf{$p$th quantile} of F is the value $x_p$ such that $x_p = F^{-1}(p)$.
 
 \subsection{Distributions}
 pmf/pdf, cdf, ex, var, range of support for k
-
 
 % --------------------------------------------- %
 % Expected Values %
@@ -453,6 +501,48 @@ pmf/pdf, cdf, ex, var, range of support for k
 
 \subsection{Moment Generating Functions}
 
+A \textbf{moment generating function (MGF)} is an alternate way of specifying the distribution of a function (apart from the pdf/cdf). For some random variable $X$, the MGF is defined as 
+\begin{align*}
+    M_X(t) := E(e^{tX}).
+\end{align*}
+wherever the expectation exists. The MFG \textit{uniquely determines} the probability distribution if it exists in some open interval around zero. 
+
+The \textbf{n-th moment} is defined as $E(X^n)$, and the \textbf{n-th central moment} is defined as $E\left(\left(X-E(X)\right)^n\right)$.
+
+By these definitions, it is clear where the "generating" part of the name comes from; the Maclaurin expansion of $e^{tX}$ is 
+\begin{equation*}
+    e^{tX} = 1 + tX + \frac{t^2X^2}{2!} + \frac{t^3X^3}{3!} + \ldots,
+\end{equation*}
+and thus, by linearity of expectation, 
+\begin{align*}
+    E(e^{tX}) &= 1 + tE(X) + \frac{t^2E(X^2)}{2!} + \frac{t^2E(X^3)}{3!} + \ldots \\
+              &= 1 + tm_1 + \frac{t^2}{2!}m_2 + \frac{t^3}{3!}m_3 + \ldots 
+\end{align*}
+where $m_i$ is the $i$th moment. 
+
+Thus, the $i$th moment is the coefficient of $\frac{t^i}{i!}$, and it can be found by taking the $i$th derivative of the series expansion (lower powered terms will disappear, and higher powered terms will equal zero when evaluated at zero).  
+
+For random variables $X$ with MGF $M_X$ and $Y$ with MGF $M_Y$, if $X$ and $Y$ are independent, then the MGF of $X+Y$ is 
+\begin{align*}
+    M_{X+Y}(t) &= E(E^{t(X+Y)}) \\
+               &= E(e^{tX+tY}) \\
+               &= E(e^{tX}e^{tY}) \\
+               &= E(e^{tX})E(e^{tY})~\text{by independence} \\
+               &= M_X(t)M_Y(t).
+\end{align*}
+
+For random variable $X$ with MGF $M_X$ and random variable $Y=a+bX$, $Y$ has MGF 
+\begin{align*}
+    M_Y(t) &= E(e^{tY}) \\
+           &= E(e^{t(a+bX)}) \\
+           &= E(e^{at + btX}) \\
+           &= E(e^{at}e^{btX}) \\
+           &= e^{at}E(btX) \\
+           &= e^{at}M_X(bt).
+\end{align*}
+
+\subsection{Equations}
+means, variances, and mgfs for each distribution. 
 
 % --------------------------------------------- %
 % Joint Distributions %
@@ -462,8 +552,77 @@ pmf/pdf, cdf, ex, var, range of support for k
 \section{Joint Distributions}
 
 \subsection{Joint and Marginal Distributions}
+
+Joint distributions deal with probabilities of multiple random variables defined on the same sample space.
+
+For random variables $X, Y$, the \textbf{joint CDF} of $X$ and $Y$ is \begin{equation*}
+    F(x, y) = P(X=x,\,Y=y).
+\end{equation*}
+
+The probability that $(X, Y)$ is in some rectangle $[x_1, x_2] \times [y_1, y_2]$ is given by 
+\begin{equation*}
+    P(x_1\leq X\leq x_2,\,y_1\leq Y\leq y_2) = F(x_2, y_2) - F(x_1, y_2) - F(x_2, y_1) + F(x_1, y_1).
+\end{equation*}
+
+\begin{figure}[!ht]
+    \centering
+    \fig{joint}
+    \caption{The probability of the shaded rectangle can be found by taking the probability of the $(x_2, y_2)$ rectangle, subtracting the probabilities of the $(x_1, y_2)$ and $(x_2, y_1)$ rectangles, and then adding back in the probability of the $(x_1, y_1)$ rectangle to account for the double subtraction.}
+\end{figure}
+
 \subsubsection{Discrete}
+
+Suppose $X$ and $Y$ are discrete random variables defined on the same sample space, with $X$ taking on values $x_1, x_2, \ldots$, and Y taking on values $y_1, y_2, \ldots$. Then the \textbf{joint pmf $p(x, y)$} is 
+\begin{equation*}
+    p(x_i, y_i) = P(X=x_i,\,Y=y_i).
+\end{equation*}
+
+The pmf of one random variable is called its \textbf{marginal probability function}. For $X$ and $Y$ jointly distributed, the marginal pmf of $X$ is given by 
+\begin{equation*}
+    p_X(x) = \sum_i p(x, y_i).
+\end{equation*}
+
+In general, to get a marginal pmf, fix a value for the random variable whose marginal pmf we want, and then sum the joint pmf over all possible values for all other (jointly distributed) random variables. That is, for $X_1, \ldots, X_n$ jointly distributed, 
+\begin{equation*}
+    p_{X_i}(x_i) = \sum_{j:x_j\neq x_i} p(x_1, \ldots, x_n).
+\end{equation*}
+
+For example, the two-dimensional marginal pmf for $X_1$ and $X_2$ would be given by 
+\begin{equation*}
+    p_{X_1, X_2}(x_1, x_2) = \sum_{x_3\ldots x_n} p(x_1, \ldots, x_n).
+\end{equation*}
+
 \subsubsection{Continuous}
+
+Suppose $X$ and $Y$ are continuous random variables. For a set $A$ defined as $A={(X, Y)\,|\,X\leq x,\,Y\leq y}$, the \textbf{joint cdf} can be expressed as
+\begin{equation*}
+    F(x, y) = \int_{-\infty}^x \int_{-\infty}^y f(u, v)\,dv\,du.
+\end{equation*}
+
+Then by the Fundamental Theorem of Calculus, the \textbf{joint density} is given by 
+\begin{equation*}
+    f(x, y) = \partial_x\partial_y F(x, y)
+\end{equation*}
+wherever the derivative is well-defined. The \textbf{joint density} $f(x, y)$ satisfies the following properties:
+\begin{itemize}
+    \item $f(x, y) \geq 0$ (non-negative)
+    \item $\displaystyle \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f(x, y) \,dx\,dy = 1$.
+\end{itemize}
+
+For some two-dimensional set $A$, 
+\begin{equation*}
+    P((X, Y) \in A) = \iint \limits_A f(x, y) \,dx\,dy.
+\end{equation*}
+
+The \textbf{marginal cdf} of $X$, denoted $F_X$, is 
+\begin{equation*}
+    F_X(x) = P(X\leq x) = \lim_{y\to\infty}F(x, y) = \int_{-\infty}^x \int_{-\infty}^{\infty}f(u, y)\,dy\,du,
+\end{equation*}
+and the \textbf{marginal density} of $X$, denoted $f_x$, is 
+\begin{equation*}
+    f_X(x) = F'_X(x) = \int_{-\infty}^{\infty}f(x, y)\,dy 
+\end{equation*}
+
 
 \subsection{Independence in Joint Distributions}
 
@@ -474,5 +633,8 @@ pmf/pdf, cdf, ex, var, range of support for k
 \subsection{Functions of Joint Distributions}
 
 \subsection{Order Statistics}
+
+\subsection{Equations}
+
 
 \end{document}

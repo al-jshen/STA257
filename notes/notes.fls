@@ -77,6 +77,10 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/was/upgreek.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/floatrow/floatrow.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/floatrow/floatrow.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/rotating.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/sidecap/sidecap.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/sidecap/sidecap.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/lastpage/lastpage.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/lastpage/lastpage.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
@@ -118,6 +122,11 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/ms/ragged2e.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/ms/ragged2e.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/ms/ragged2e.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/ms/everysel.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/ms/everysel.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -176,6 +185,9 @@ INPUT ./figures/pmfcdf.png
 INPUT ./figures/pmfcdf.png
 INPUT ./figures/pmfcdf.png
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT ./figures/joint.png
+INPUT ./figures/joint.png
+INPUT ./figures/joint.png
 INPUT notes.aux
 INPUT ./notes.out
 INPUT ./notes.out
