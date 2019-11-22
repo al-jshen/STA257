@@ -25,6 +25,11 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\SD}{\mathrm{SD}}
+
 \setcounter{tocdepth}{2}
 \setlength{\parindent}{0pt}
 \AtBeginDocument{%
@@ -496,6 +501,101 @@ pmf/pdf, cdf, ex, var, range of support for k
 \section{Expected Values}
 
 \subsection{Mean and Variance}
+For two independent random variables $X, Y$, the expectation of the product is the product of the expectation:
+\begin{equation*}
+    \E(XY) = \E(X)\E(Y)
+\end{equation*}
+
+\subsection{Covariance and Correlation}
+
+\subsubsection{Covariance}
+
+Covariance allows us to talk about the variance for sums of random variables. For two jointly distributed random variables $X, Y$, the \textbf{covariance of $X$ and $Y$} is defined as 
+\begin{equation*}
+    \Cov (X, Y) = \E((X - \E X)(Y - \E Y)).
+\end{equation*}
+
+An alternate way to write the covariance is given by 
+\begin{align*}
+    \Cov (X, Y) &= \E((X - \E X)(Y - \E Y)) \\
+                &= \E(XY - Y\E(X) - X\E(Y) + \E(X)\E(Y)) \\
+                &= \E(XY) - \E(Y\E(X)) - \E(X \E(Y)) + \E(\E(X) \E(Y))~\text{by linearity of expectation} \\
+                &= \E(XY) - \E(X)\E(Y) - \E(Y)\E(X) + \E(X)\E(Y)~\text{by taking out constants} \\
+                &= \E(XY) - \E(X)\E(Y).
+\end{align*}
+
+If $X$ and $Y$ are independent, then the covariance is zero. Note that the converse is not true. 
+
+Consider the following cases:
+\begin{itemize}
+    \item Note that the covariance of some random variable with itself reduces down to its variance:  
+        \begin{align*}
+            \Cov(X, X) &= \E((X-\E(X))(X-\E(X))) \\
+                       &= \E((X-\E(X))^2) \\
+                       &= \Var(X).
+        \end{align*}
+
+    \item For some constant $c$, the covariance of $X$ and $c$ is zero:
+        \begin{align*}
+            \Cov(X, c) &= \E((X - \E(X))(c-\E(c))) \\
+            &= \E((X-\E(X))(c-c)) \\ 
+            &= \E(0) = 0.
+        \end{align*}
+        
+    \item The covariance of a scaled random variable is a scaled covariance:
+        \begin{align*}
+            \Cov(cX, Y) &= \E((cX - \E(cX))(Y - \E(Y))) \\
+            &= \E((cX - c\E(X))(Y - \E(Y))) \\
+            &= c\,\E((X - \E(X))(Y - \E(Y))) \\
+            &= c\,\Cov(X, y).
+        \end{align*}
+
+    \item For random variables $X$, $Y$, and $Z$, the covariance is ``distributive":
+        \begin{align*}
+            \Cov(X, Y+Z) &= \E((X-\E(X))((Y-\E(Y)) + (Z-\E(Z)))) \\
+            &= \E((X-\E(X))(Y-\E(Y)) + (X-\E(X))(Z-\E(Z))) \\
+            &= \E((X-\E(X))(Y-\E(Y))) + \E((X-\E(X))(Z-\E(Z))) \\
+            &= \Cov(X, Y) + \Cov(X, Z).
+        \end{align*}
+        More generally, the covariance of sums is
+        \begin{align*}
+            \Cov\left(\sum_i a_iX_i, \sum_j b_jY_j\right) = \sum_i\sum_ja_ib_j\Cov(X_i, Y_j)
+        \end{align*}
+
+\end{itemize}
+
+The covariance can be used to deal with the variance of sums: 
+\begin{align*}
+    \Var(X+Y) &= \Cov(X+Y, X+Y) \\
+    &= \Cov(X, X) + \Cov(X, Y) + \Cov(Y, X) + \Cov(Y, Y) \\
+    &= \Var(X) + 2\Cov(X, Y) + \Var(Y).
+\end{align*}
+Note that if $X$ and $Y$ are independent, then the covariance term becomes zero, and we conclude that the variance of the sum is the sum of the variance. More generally, 
+\begin{align*}
+    \Var(X_1 + \ldots + X_n) &= \sum_i \Var(X_i) + 2\sum_i \sum_{j \leq i} \Cov(X_i, X_j) \\
+    &= \sum_i \Var(X_i) + \sum_{i \neq j} \Cov(X_i, X_j)
+\end{align*}
+
+\subsubsection{Correlation}
+
+Given jointly distributed $X$ and $Y$ for which the variances and covariances exist, and the variances are nonzero, the \textbf{correlation of $X$ and $Y$} is defined as 
+\begin{align*}
+    \rho &= \frac{\Cov(X, Y)}{\SD(X)\SD(Y)} \\
+    &= \frac{\Cov(X, Y)}{\sqrt{\Var(X)\Var(Y)}} \\
+    &= \Cov\left(\frac{X-\E(X)}{\SD(X)}, \frac{Y-\E(Y)}{\SD(Y)}\right)~\text{(standardize, then take the covariance)}
+\end{align*}
+
+The correlation is always between $-1$ and $1$. 
+
+Proof: Assume that $X$ and $Y$ have been standardized. Then $\Var(X) = \Var(Y) = 1$.
+
+\begin{align*}
+    0 \leq Var(X+Y) &= \Var(X) + \Var(Y) + 2\Cov(X, Y) = 1 + 1 + 2\rho = 2(1+\rho)\\
+    \implies & \rho \geq -1 \\
+    0 \leq Var(X-Y) &= \Var(X) + \Var(Y) - 2\Cov(X, Y) = 1 + 1 - 2\rho = 2(1-\rho)\\
+    \implies & \rho \leq 1
+\end{align*}
+
 \subsubsection{LOTUS}
 \subsubsection{Inequalities}
 
