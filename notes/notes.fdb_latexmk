@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1574393861 "notes.tex" "notes.pdf" "notes" 1574393862
+["pdflatex"] 1574532816 "notes.tex" "notes.pdf" "notes" 1574532817
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -113,13 +113,13 @@
   "figures/addition_law.png" 1572642162 53607 f2742f4932b2e46d8ada1f263d14efb8 ""
   "figures/joint.png" 1573434708 22712 f11fb8a9595211f9d6c9d2a8ca26225f ""
   "figures/pmfcdf.png" 1572664791 148178 7e6b3317922054f2c9f1a579f33a89f4 ""
-  "notes.aux" 1574393862 7465 d3ec65213d86126cf4fbcab3eddcaa72 "pdflatex"
-  "notes.out" 1574393862 1710 638d31e1c7d16ae472f466019dfece9a "pdflatex"
-  "notes.tex" 1574393861 30507 54f3b3f2084a4087850fe9e6846312d0 ""
-  "notes.toc" 1574393862 4320 33c0307cf8a9872e8f2f0acc360f7294 "pdflatex"
+  "notes.aux" 1574532817 7465 d3ec65213d86126cf4fbcab3eddcaa72 "pdflatex"
+  "notes.out" 1574532817 1710 638d31e1c7d16ae472f466019dfece9a "pdflatex"
+  "notes.tex" 1574532815 31229 759bd7c58ccb9af12ae34b10ca063011 ""
+  "notes.toc" 1574532817 4320 33c0307cf8a9872e8f2f0acc360f7294 "pdflatex"
   (generated)
   "notes.log"
-  "notes.aux"
-  "notes.pdf"
-  "notes.toc"
   "notes.out"
+  "notes.aux"
+  "notes.toc"
+  "notes.pdf"

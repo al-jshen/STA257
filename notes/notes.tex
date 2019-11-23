@@ -493,6 +493,20 @@ This identity implies that for any positive integer $n$,
 \subsection{Distributions}
 pmf/pdf, cdf, ex, var, range of support for k
 
+\setstretch{2}
+\begin{tabular}{l l l}
+    Bernoulli & Bern($p$) & $p(k) = \begin{cases}
+                                    q = 1-p & k = 0 \\
+                                    p & k = 1 
+                                \end{cases}$ \\
+
+    Binomial & Bin($n, p$) & $\displaystyle p(k) = {n \choose k}\,p^k\,q^{n-k}$ \\
+    Geometric & Geom($p$) & $\displaystyle p(k) = q^{k-1}\,p$ \\
+    Negative Binomial & NB($r, p$) & $\displaystyle p(k) = {k-1 \choose r-1}\,p^r\,q^{k-r}$ \\
+    Hypergeometric & HG($n, r, m$) & $\displaystyle p(k) = \frac{{r \choose k}\,{n-r \choose m-k}}{{n \choose m}}$ \\
+    Poisson & Pois($\lambda$) & $\displaystyle p(k) = \frac{e^{-\lambda}\,\lambda^k}{k!}$ \\
+\end{tabular}
+\setstretch{1}
 % --------------------------------------------- %
 % Expected Values %
 % --------------------------------------------- %
