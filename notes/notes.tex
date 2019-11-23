@@ -500,11 +500,18 @@ pmf/pdf, cdf, ex, var, range of support for k
                                     p & k = 1 
                                 \end{cases}$ \\
 
-    Binomial & Bin($n, p$) & $\displaystyle p(k) = {n \choose k}\,p^k\,q^{n-k}$ \\
-    Geometric & Geom($p$) & $\displaystyle p(k) = q^{k-1}\,p$ \\
-    Negative Binomial & NB($r, p$) & $\displaystyle p(k) = {k-1 \choose r-1}\,p^r\,q^{k-r}$ \\
-    Hypergeometric & HG($n, r, m$) & $\displaystyle p(k) = \frac{{r \choose k}\,{n-r \choose m-k}}{{n \choose m}}$ \\
-    Poisson & Pois($\lambda$) & $\displaystyle p(k) = \frac{e^{-\lambda}\,\lambda^k}{k!}$ \\
+                                Binomial & Bin($n, p$) & $\displaystyle p(k) = {n \choose k}\,p^k\,q^{n-k}$, for $k=1,2,\ldots$ \\
+                                Geometric & Geom($p$) & $\displaystyle p(k) = q^{k-1}\,p$, for $k=1,2,\ldots$ \\
+                                Negative Binomial & NB($r, p$) & $\displaystyle p(k) = {k-1 \choose r-1}\,p^r\,q^{k-r}$, for $k=1,2,\ldots$; $r\leq k$ \\
+                                Hypergeometric & HG($n, r, m$) & $\displaystyle p(k) = \frac{{r \choose k}\,{n-r \choose m-k}}{{n \choose m}}$, for $k\leq m, r \leq n$ \\
+                                Poisson & Pois($\lambda$) & $\displaystyle p(k) = \frac{e^{-\lambda}\,\lambda^k}{k!}$, for $k=0,1,\ldots$; $\lambda > 0$ \\[0.2cm]
+    \hline
+    Uniform & U($a, b$) & $\displaystyle f(x) = \frac{1}{b-a}$, for $a\leq x\leq b$ \\
+    Exponential & Exp($\lambda$) & $\displaystyle f(x) = \lambda\,e^{-\lambda\,x}$, for $x\geq 0$ \\
+    Gamma & Gamma($\alpha, \lambda$) & $\displaystyle g(t) = \frac{\lambda^\alpha}{\Gamma(\alpha)}\,t^{\alpha - 1}\,e^{-\lambda\,t}$, for $t\geq 0$; $x > 0$a \\
+    Beta & Beta($a, b$) & $\displaystyle f(u) = \frac{\Gamma(a+b)}{\Gamma(a)\,\Gamma(b)}\,u^{a-1}\,(1-u)^{b-1}$, for $0\leq u\leq 1$ \\
+    Standard Normal & N($0, 1$) & $\displaystyle \varphi(z) = \frac{1}{\sqrt{2\pi}}\,e^{-z^2/2}$ \\
+    Normal & N($\mu, \sigma^2$) & $\displaystyle f(x) = \frac{1}{\sigma\sqrt{2\pi}}\,e^{-\left(\frac{x-\mu}{\sigma}\right)^2 / 2} = \frac{1}{\sigma}\varphi\left(\frac{x-\mu}{\sigma}\right)$
 \end{tabular}
 \setstretch{1}
 % --------------------------------------------- %

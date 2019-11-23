@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1574532816 "notes.tex" "notes.pdf" "notes" 1574532817
+["pdflatex"] 1574534027 "notes.tex" "notes.pdf" "notes" 1574534028
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -37,6 +37,7 @@
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1248133631 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
@@ -113,13 +114,13 @@
   "figures/addition_law.png" 1572642162 53607 f2742f4932b2e46d8ada1f263d14efb8 ""
   "figures/joint.png" 1573434708 22712 f11fb8a9595211f9d6c9d2a8ca26225f ""
   "figures/pmfcdf.png" 1572664791 148178 7e6b3317922054f2c9f1a579f33a89f4 ""
-  "notes.aux" 1574532817 7465 d3ec65213d86126cf4fbcab3eddcaa72 "pdflatex"
-  "notes.out" 1574532817 1710 638d31e1c7d16ae472f466019dfece9a "pdflatex"
-  "notes.tex" 1574532815 31229 759bd7c58ccb9af12ae34b10ca063011 ""
-  "notes.toc" 1574532817 4320 33c0307cf8a9872e8f2f0acc360f7294 "pdflatex"
+  "notes.aux" 1574534028 7465 d3ec65213d86126cf4fbcab3eddcaa72 "pdflatex"
+  "notes.out" 1574534028 1710 638d31e1c7d16ae472f466019dfece9a "pdflatex"
+  "notes.tex" 1574534026 32293 2aef5a6545c071fc9e2aacd0b154ebad ""
+  "notes.toc" 1574534028 4320 33c0307cf8a9872e8f2f0acc360f7294 "pdflatex"
   (generated)
+  "notes.toc"
+  "notes.aux"
+  "notes.pdf"
   "notes.log"
   "notes.out"
-  "notes.aux"
-  "notes.toc"
-  "notes.pdf"
