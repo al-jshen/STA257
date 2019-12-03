@@ -83,6 +83,8 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/lastpage/lastpage.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/lastpage/lastpage.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/lscape.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty

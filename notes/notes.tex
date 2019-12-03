@@ -15,6 +15,7 @@
 \usepackage{cancel}
 \usepackage{sidecap}
 \usepackage{lastpage}
+\usepackage{lscape}
 \geometry{total={210mm,297mm},
 left=25mm,right=25mm,%
 bindingoffset=0mm, top=20mm,bottom=20mm}
@@ -493,7 +494,8 @@ This identity implies that for any positive integer $n$,
 \subsection{Distributions}
 pmf/pdf, cdf, ex, var, range of support for k
 
-\setstretch{2}
+\begin{landscape}
+    \setstretch{2.7}
 \begin{tabular}{l l l}
     Bernoulli & Bern($p$) & $p(k) = \begin{cases}
                                     q = 1-p & k = 0 \\
@@ -514,6 +516,7 @@ pmf/pdf, cdf, ex, var, range of support for k
     Normal & N($\mu, \sigma^2$) & $\displaystyle f(x) = \frac{1}{\sigma\sqrt{2\pi}}\,e^{-\left(\frac{x-\mu}{\sigma}\right)^2 / 2} = \frac{1}{\sigma}\varphi\left(\frac{x-\mu}{\sigma}\right)$
 \end{tabular}
 \setstretch{1}
+\end{landscape}
 % --------------------------------------------- %
 % Expected Values %
 % --------------------------------------------- %
@@ -540,8 +543,8 @@ An alternate way to write the covariance is given by
 \begin{align*}
     \Cov (X, Y) &= \E((X - \E X)(Y - \E Y)) \\
                 &= \E(XY - Y\E(X) - X\E(Y) + \E(X)\E(Y)) \\
-                &= \E(XY) - \E(Y\E(X)) - \E(X \E(Y)) + \E(\E(X) \E(Y))~\text{by linearity of expectation} \\
-                &= \E(XY) - \E(X)\E(Y) - \E(Y)\E(X) + \E(X)\E(Y)~\text{by taking out constants} \\
+                &= \E(XY) - \E(Y\E(X)) - \E(X \E(Y)) + \E(\E(X) \E(Y)) &\text{by linearity of expectation} \\
+                &= \E(XY) - \E(X)\E(Y) - \E(Y)\E(X) + \E(X)\E(Y) &\text{by taking out constants} \\
                 &= \E(XY) - \E(X)\E(Y).
 \end{align*}
 
@@ -603,7 +606,7 @@ Given jointly distributed $X$ and $Y$ for which the variances and covariances ex
 \begin{align*}
     \rho &= \frac{\Cov(X, Y)}{\SD(X)\SD(Y)} \\
     &= \frac{\Cov(X, Y)}{\sqrt{\Var(X)\Var(Y)}} \\
-    &= \Cov\left(\frac{X-\E(X)}{\SD(X)}, \frac{Y-\E(Y)}{\SD(Y)}\right)~\text{(standardize, then take the covariance)}
+    &= \Cov\left(\frac{X-\E(X)}{\SD(X)}, \frac{Y-\E(Y)}{\SD(Y)}\right) &\text{(standardize, then take the covariance)}
 \end{align*}
 
 The correlation is always between $-1$ and $1$. 
@@ -619,6 +622,90 @@ Proof: Assume that $X$ and $Y$ have been standardized. Then $\Var(X) = \Var(Y) =
 
 \subsubsection{LOTUS}
 \subsubsection{Inequalities}
+
+\subsection{Conditional Expectation}
+
+This is the same as expectation, but conditioning on some additional information that we are given. For random variables $X$, $Y$, the \textbf{conditional expectation} of $Y$ given $X$ is, in the discrete case, 
+\begin{align*}
+    \E(Y|X=x) = \sum_y y\,p_{Y|X}(y|x)
+\end{align*}
+and in the continuous case,
+\begin{align*}
+    \E(Y|X=x) = \int_{-\infty}^{\infty} y\,f_{Y|X}(y|x)dy = \int_{-\infty}^{\infty} y\,\frac{f_{X, Y}(x, y)}{f_x(x)}dy
+\end{align*}
+
+If the conditional expectation of $Y$ given $X=x$ is defined for all $x$ in the domain of $X$, then the expectation is a well-defined function of $X$. Then we write \textbf($\E(Y|X)$), which is a random variable that is a function of $X$. This computes, for some fixed $X$, the expectation of $Y$. 
+
+\textbf{Law of Total Expectation}, also called \textbf{Law of Iterated Expectation} or \textbf{Adam's Law}: 
+\begin{align*}
+    \E(Y) = \E(\E(Y|X))
+\end{align*}
+
+Proof: Let $g(X) = \E(Y|X)$. Want to show that $\E(Y) = \E(g(X))$. 
+\begin{align*}
+    \E(g(X)) &= \sum_x g(X)\,P(X=x) &\text{by LOTUS} \\
+    &= \sum_x E(Y|X=x)\,P(X=x) &\text{by definition of $g$}\\
+    &= \sum_x \left(\sum_y P(Y=y|X=x)\right)\,P(X=x) &\text{by definition of expectation} \\
+    &= \sum_y \sum_x y\,P(Y=y, X=x) &\text{by definition of the joint PMF and swapping order of summation} \\
+    &= \sum_y y \sum_x P(Y=y, X=x) &\text{since $y$ does not depend on $x$} \\
+    &= \sum_y y P(Y=y) &\text{by definition of the marginal PMF} \\
+    &= \E(Y) &\text{by definition of expectation}
+\end{align*}
+
+Conditional expectations satisfy the following properties:
+\begin{itemize}
+    \item Taking out what is known: for any function $h$ of $X$, $\E(h(x)\,Y|X) = h(x)\,E(Y|X)$
+    \item If $X$, $Y$ are independent, then $\E(Y|X) = \E(Y)$
+    \item The \textbf{residual, $Y-\E(Y|X)$}, is uncorrelated with any function of $X$: $\E((Y-\E(Y|X))h(x)) = 0$ 
+        
+        Proof:
+        \begin{align*}
+            \E((Y-\E(Y|X))h(x)) &= \E(Yh(x) - \E(Y|X)h(x)) \\
+            &= \E(Yh(x)) - \E(\E(Y|X)h(x)) &\text{by linearity} \\
+            &= \E(Yh(x)) - \E(\E(Yh(x)|X)) &\text{by the reverse of the first property} \\
+            &= \E(Yh(x)) - \E(Yh(x)) &\text{by Iterated Expectation} \\
+            &= 0
+        \end{align*}
+\end{itemize}
+
+The \textbf{conditional variance} of $Y$ given $X$ is the same as the normal variance but conditioned on $X$ wherever appropriate:
+\begin{align*}
+    \Var(Y|X) = \Var(Y^2|X) - (\Var(Y|X))^2 = \E((Y-\E(Y|X))^2|X)
+\end{align*}
+
+\textbf{Law of Total Variance}, also called \textbf{Law of Iterated Variance} or \textbf{Eve's Law}:
+\begin{align*}
+    \Var(Y) = \Var(\E(Y|X)) + \E(\Var(Y|X))
+\end{align*}
+
+Proof: Just as we defined $\E(Y|X)$ before to be a random variable as a function of $X$, we can do the same with $\Var(Y|X)$ if $\Var(Y|X=x) = E(Y^2|X=x) - (\E(Y)|X=x)^2$ is defined for all $x$ in the domain of $X$. Then 
+\begin{align*}
+    &\Var(Y|X) = \E(Y^2|X) - (\E(Y|X))^2 &\text{by definition of variance} \\
+    \implies &\E(\Var(Y|X)) = \E(\E(Y^2|X)) - \E(\E(Y|X))^2) &\text{by linearity of expectation}
+\end{align*}
+and 
+\begin{align*}
+    \Var(\E(Y|X)) = \E((\E(Y|X))^2) - (\E(\E(Y|X)))^2 &\qquad\text{by definition of variance}
+\end{align*}
+and 
+\begin{align*}
+    \Var(Y) &= \E(Y^2) - (\E(Y))^2 &\text{by definition of variance} \\ 
+    &= \E(\E(Y^2|X)) - (\E(\E(Y|X)))^2 &\text{by iterated expectation}
+\end{align*}
+Then 
+\begin{align*}
+    \Var(Y) &= \E(\E(Y^2|X)) - (\E(\E(Y|X)))^2
+\end{align*}
+If we add and subtract $\E((\E(Y|X))^2)$, this expression remains the same:
+\begin{align*}
+    \Var(Y) &= \E(\E(Y^2|X)) - \E((\E(Y|X))^2) + \E((\E(Y|X))^2) - (\E(\E(Y|X)))^2
+\end{align*}
+Then by grouping the first two and the last two terms together:
+\begin{align*}
+    \Var(Y) &= \E(\Var(Y|X)) + \Var(\E(Y|X))
+\end{align*}
+
+
 
 \subsection{Moment Generating Functions}
 
@@ -648,7 +735,7 @@ For random variables $X$ with MGF $M_X$ and $Y$ with MGF $M_Y$, if $X$ and $Y$ a
     M_{X+Y}(t) &= E(E^{t(X+Y)}) \\
                &= E(e^{tX+tY}) \\
                &= E(e^{tX}e^{tY}) \\
-               &= E(e^{tX})E(e^{tY})~\text{by independence} \\
+               &= E(e^{tX})E(e^{tY}) &\text{by independence} \\
                &= M_X(t)M_Y(t).
 \end{align*}
 
@@ -757,5 +844,27 @@ and the \textbf{marginal density} of $X$, denoted $f_x$, is
 
 \subsection{Equations}
 
+\section{Limit Theorems}
 
+\subsection{Law of Large Numbers}
+
+Given i.i.d.\ random variables $X_1, X_2, \ldots$, each with mean $\mu$ and variance $\sigma^2$, let the sample mean be defined as $\overline{X_n} = \frac{1}{n}\sum_{i=1}^{n}X_i$. Then for $\epsilon > 0$ the \textbf{weak law of large numbers} says that , 
+\begin{align*}
+    P(|\overline{X_n} - \mu| > \epsilon) \to 0~\text{as $n \to \infty$}
+\end{align*}
+In other words, as the sample size increases, it is increasingly likely that the sample mean is close to the true mean. 
+
+Proof: Note that
+\begin{align*}
+    \Var(\overline{X_n}) &= \Var(\frac{1}{n}\sum_{i=1}^{n}X_i) &\text{by definition of $\overline{X_n}$} \\
+    &= \frac{1}{n^2}\Var(\sum_{i=1}^{n}X_i) &\text{by pulling out the $\frac{1}{n}$} \\
+    &= \frac{1}{n^2}n\sigma^2 &\text{by independence}
+    &= \frac{\sigma^2}{n}
+\end{align*}
+
+Then 
+\begin{align*}
+    P(|\overline{X_n} - \mu| > \epsilon) &\leq \frac{\Var(\overline{X_n})}{\epsilon^2} &\text{by Chebyshev's inequality} \\
+    &= \frac{\sigma^2}{n\epsilon^2} \to 0 &\text{as $n \to \infty$}
+\end{align*}
 \end{document}
