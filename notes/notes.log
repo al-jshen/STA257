@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 DEC 2019 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 DEC 2019 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,20 +517,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./notes.aux)
 \openout1 = `notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -637,9 +637,9 @@ LaTeX Info: Redefining \selectfont on input line 126.
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 71.
+(lastpage)             ! on input line 73.
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 71.
+Package hyperref Info: Link coloring OFF on input line 73.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -649,9 +649,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count150
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
 
 (./notes.out) (./notes.out)
 \@outlinefile=\write3
@@ -674,22 +674,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 105.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
  [2]
-<./figures/addition_law.png, id=176, 510.90875pt x 167.62625pt>
+<./figures/addition_law.png, id=181, 510.90875pt x 167.62625pt>
 File: ./figures/addition_law.png Graphic file (type png)
 <use ./figures/addition_law.png>
-Package pdftex.def Info: ./figures/addition_law.png  used on input line 186.
+Package pdftex.def Info: ./figures/addition_law.png  used on input line 188.
 (pdftex.def)             Requested size: 273.14923pt x 89.61647pt.
 
-Overfull \hbox (49.15976pt too wide) detected at line 194
+Overfull \hbox (49.15976pt too wide) detected at line 196
 []
  []
 
@@ -697,27 +697,27 @@ Overfull \hbox (49.15976pt too wide) detected at line 194
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 213.
+(amsmath)                 on input line 215.
 
 [4] [5] [6]
-<./figures/pmfcdf.png, id=206, 870.25125pt x 414.54875pt>
+<./figures/pmfcdf.png, id=211, 870.25125pt x 414.54875pt>
 File: ./figures/pmfcdf.png Graphic file (type png)
 <use ./figures/pmfcdf.png>
-Package pdftex.def Info: ./figures/pmfcdf.png  used on input line 352.
+Package pdftex.def Info: ./figures/pmfcdf.png  used on input line 354.
 (pdftex.def)             Requested size: 273.14923pt x 130.11545pt.
  [7 <./figures/pmfcdf.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
 [8] [9]
-Overfull \hbox (272.5922pt too wide) in paragraph at lines 482--483
+Overfull \hbox (272.5922pt too wide) in paragraph at lines 484--485
 []\OT1/cmr/m/n/20.74 watch the stat110 video for gamma https://www.youtube.com/
 watch?v=Qjeswpm0cWY 
  []
 
 
-Overfull \hbox (229.3777pt too wide) in paragraph at lines 486--487
+Overfull \hbox (229.3777pt too wide) in paragraph at lines 488--489
 \OT1/cmr/m/n/20.74 watch the stat110 beta videos https://www.youtube.com/watch?
 v=UZjlBQbV1KU 
  []
@@ -727,34 +727,136 @@ v=UZjlBQbV1KU
 ] [12
 
 ] [13]
-Overfull \hbox (58.01419pt too wide) detected at line 653
+Overfull \hbox (58.01419pt too wide) detected at line 655
 []
  []
 
 [14] [15] [16]
-<./figures/joint.png, id=278, 472.26437pt x 316.18124pt>
+<./figures/joint.png, id=283, 472.26437pt x 316.18124pt>
 File: ./figures/joint.png Graphic file (type png)
 <use ./figures/joint.png>
-Package pdftex.def Info: ./figures/joint.png  used on input line 777.
+Package pdftex.def Info: ./figures/joint.png  used on input line 779.
 (pdftex.def)             Requested size: 273.14923pt x 182.87384pt.
  [17 <./figures/joint.png>] [18]
+! Missing } inserted.
+<inserted text> 
+                }
+l.898 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.898 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> 2yM\left (yt\right )\right )
+                                       
+l.898 \end{align*}
+                  
+I'm ignoring a \right that had no matching \left.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.898 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.898 \end{align*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.898 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.898 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> 2yM\left (yt\right )\right )
+                                       
+l.898 \end{align*}
+                  
+I'm ignoring a \right that had no matching \left.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.898 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.898 \end{align*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+[19] 
 AED: lastpage setting LastPage
-[19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 870.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 870.
+[20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 915.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 915.
  (./notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 870.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 870.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 915.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 915.
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 8A2DF608FD1EFD92AED5DF1C28E07479;1903.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 870.
+(rerunfilecheck)             Checksum: CEBAE4F6C83D0C2DF8403D5370B58B1E;1974.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 915.
  ) 
 Here is how much of TeX's memory you used:
- 9889 strings out of 492616
- 149056 string characters out of 6129482
- 273127 words of memory out of 5000000
- 13568 multiletter control sequences out of 15000+600000
+ 9892 strings out of 492616
+ 149093 string characters out of 6129482
+ 273139 words of memory out of 5000000
+ 13569 multiletter control sequences out of 15000+600000
  11701 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,19n,43p,457b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -776,10 +878,10 @@ ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2019/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/te
 xlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on notes.pdf (19 pages, 377574 bytes).
+Output written on notes.pdf (20 pages, 384019 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 330 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
- 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 389 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 

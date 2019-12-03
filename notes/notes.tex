@@ -25,11 +25,13 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \newcommand{\ind}{\leavevmode{\parindent=1em\indent}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 
 \newcommand{\E}{\mathrm{E}}
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\SD}{\mathrm{SD}}
+\newcommand{\M}{\mathrm{M}}
 
 \setcounter{tocdepth}{2}
 \setlength{\parindent}{0pt}
@@ -848,7 +850,7 @@ and the \textbf{marginal density} of $X$, denoted $f_x$, is
 
 \subsection{Law of Large Numbers}
 
-Given i.i.d.\ random variables $X_1, X_2, \ldots$, each with mean $\mu$ and variance $\sigma^2$, let the sample mean be defined as $\overline{X_n} = \frac{1}{n}\sum_{i=1}^{n}X_i$. Then for $\epsilon > 0$ the \textbf{weak law of large numbers} says that , 
+Given i.i.d.\ random variables $X_1, X_2, \ldots$, each with mean $\mu$ and variance $\sigma^2$, let the sample mean be defined as $\overline{X_n} = \frac{1}{n}\sum_{i=1}^{n}X_i$. Then for $\epsilon > 0$, the \textbf{weak law of large numbers} says that 
 \begin{align*}
     P(|\overline{X_n} - \mu| > \epsilon) \to 0~\text{as $n \to \infty$}
 \end{align*}
@@ -867,4 +869,47 @@ Then
     P(|\overline{X_n} - \mu| > \epsilon) &\leq \frac{\Var(\overline{X_n})}{\epsilon^2} &\text{by Chebyshev's inequality} \\
     &= \frac{\sigma^2}{n\epsilon^2} \to 0 &\text{as $n \to \infty$}
 \end{align*}
+
+\subsection{Central Limit Theorem}
+
+Given i.i.d\ random variables $X_1, X_2, \ldots$, each with mean $\mu$, variance $\sigma^2$, and MGF $M(t)$ defined on some interval around zero. Let $S_n = \sum_{i=1}^{n} X_i$. Then the \textbf{central limit theorem} says that  
+\begin{align*}
+    \lim_{n\to \infty} P\left(\frac{S_n}{\sigma \sqrt{n}} \leq x\right) = \Phi(x), -\infty < x < \infty
+\end{align*}
+In other words, for large $n$, the distribution of $\frac{S_n}{\sigma \sqrt{n}}$ approaches the standard normal distribution. 
+
+Proof:i Without loss of generality, assume that $\mu = 0$ and $\sigma^2 = 1$ (we can always normalize to achieve this). So, we want to show that the MGF of $\frac{S_n}{\sqrt{n}}$ approaches the MGF of the standard normal. By definition, the MGF is 
+\begin{align*}
+    \E\left(e^{t\frac{S_n}{\sqrt{n}}}\right) &= \E\left(t\frac{X_1}{\sqrt{n}}\right)\ldots\E\left(t\frac{X_n}{\sqrt{n}}\right) &\text{by independence of the $X_i$'s} \\
+    &= \left(\E\left(t\frac{X_1}{\sqrt{n}}\right)\right)^n &\text{since all the MGFs are equivalent by i.i.d.} \\
+    &= \left(\M\left(\frac{t}{\sqrt{n}}\right)\right)^n &\text{by definition of the MGF}
+\end{align*}
+This is an indeterminate form. We can proceed by taking the logarithm:
+\begin{align*}
+    \log\left(M_{\frac{S_n}{\sqrt{n}}}(t)\right) = \log\left(\left(\M\left(\frac{t}{\sqrt{n}}\right)\right)^n\right) = n\log\left(\M\left(\frac{t}{\sqrt{n}}\right)\right)
+\end{align*}
+Now taking the limit, we get 
+\begin{align*}
+    \lim_{n\to\infty} n\log\left(\M\left(\frac{t}{\sqrt{n}}\right)\right) = \lim_{n\to\infty} \frac{\log\left(\M\left(\frac{t}{\sqrt{n}}\right)\right)}{1/n}
+\end{align*}
+Remember that $n \in \Z$, and we cannot do calculus on $\Z$. We perform a change of variables, where we let $Y = \frac{1}{\sqrt{n}}$. Then $Y\in\R$. Rewriting the above limit in terms of $Y$, we get 
+\begin{align*}
+    \lim_{y\to 0} \frac{\log\left(M\left(yt\right)\right)}{y^2} &= \lim_{y\to 0} \frac{M'\left(yt\right)t}{2yM\left(yt\right)\right)} &\text{by L'Hopital's Rule and the Chain Rule}
+\end{align*}
+Note that 
+\begin{itemize}
+    \item $M(0) = 1$
+    \item $M'(0) = \mu = 0$
+    \item $M''(0) = \E(X^2) = \Var(X) + (\E(X))^2 = \Var(X) = 1$ since $\E(X) = 0$
+\end{itemize}
+Then the limit becomes 
+\begin{align*}
+    \frac{t}{2} \lim_{y\to 0} \frac{M'\left(yt\right)}{y} &= \frac{t^2}{2} \lim_{y\to 0} \frac{M''\left(yt\right)}{1} &\text{by L'Hopital's Rule and the Chain Rule} \\
+    &= \frac{t^2}{2}
+\end{align*}
+Now taking the exponent to reverse our logarithm operation, we find that 
+\begin{align*}
+    M_{\frac{S_n}{\sqrt{n}}}(t) = e^{\frac{t^2}{2}}
+\end{align*}
+which is just the MGF of the standard normal, as we wanted. 
 \end{document}
